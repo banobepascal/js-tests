@@ -83,3 +83,29 @@ describe('Edit person', () => {
     });
   });
 });
+
+describe('Delete Person', () => {
+  describe('DELETE /', () => {
+    it('Should delete a user with given id', (done) => {
+      const id = 2;
+      chai.request(app)
+        .delete(`/people/${id}`)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          done();
+        });
+    });
+
+    // person doesnot exist
+    it('User with given id doesnt exist', (done) => {
+      const id = 5;
+      chai.request(app)
+        .delete(`/people/${id}`)
+        .end((err, res) => {
+          res.should.have.status(404);
+          done();
+        });
+    });
+  });
+});
