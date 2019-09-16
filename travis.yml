@@ -3,10 +3,12 @@ sudo: false
 language: node_js
 
 node_js:
-  - node
+  - 8.10.0
+
+cache: npm
 
 install: 
-  - npm test
+  - npm ci
 
 after_script: 
   - npm run coverage
