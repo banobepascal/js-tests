@@ -10,4 +10,4 @@ install:
 
 after_script: 
   - npm run coverage
-  - npm run test:coveralls
+  - npm run test:coveralls 
