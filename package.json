@@ -43,6 +43,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.9.1",
+    "swagger": "^0.7.5",
     "swagger-ui": "^3.23.10"
   }
 }
